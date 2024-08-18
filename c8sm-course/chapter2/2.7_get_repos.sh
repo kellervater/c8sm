@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# see: https://employee-academy.camunda.com/c8-self-managed-using-c8-helm-chart/1807237
+
 REPO_PATH="$(dirname "$(realpath "$0")")/../repos"
 
 get_repo() {
