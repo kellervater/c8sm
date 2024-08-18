@@ -1,0 +1,6 @@
+helm 3.15.3
+k9s 0.32.5
+kind 0.24.0
+kubectl 1.29.3
+kubectx 0.9.5
+nodejs 22.6.0

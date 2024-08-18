@@ -1,0 +1,24 @@
+{
+	"name": "Supercharged Devcontainer",
+  
+	"build": {
+		"dockerfile": "./Dockerfile"
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-azuretools.vscode-docker",
+				"ms-vscode.makefile-tools",
+				"ms-python.python",
+				"nguyenngoclong.asdf"
+			]
+		}
+	},
+	"features": {"ghcr.io/devcontainers/features/docker-in-docker": "latest"},
+  // "mounts": [
+	// 	"source=${localEnv:HOME}${localEnv:USERPROFILE}/.kube,target=/root/.kube,type=bind,consistency=cached",
+	// 	"source=${localEnv:HOME}${localEnv:USERPROFILE}/.aws,target=/root/.aws,type=bind,consistency=cached",
+	// 	"source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/root/.ssh,type=bind,consistency=cached"
+	// ],
+  "postCreateCommand": "bash ./.devcontainer/post-create.sh"
+}
