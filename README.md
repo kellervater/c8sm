@@ -15,4 +15,4 @@ Open the [Command Palette](https://code.visualstudio.com/docs/getstarted/userint
 
 Hit `Enter` twice and let the magic happen!
 
-In the end you'll find yourself in a ready to use devcontainer with all tools installed, required to 
+In the end you'll find yourself in a ready to use devcontainer with all tools installed, required to complete the course.
