@@ -3,10 +3,12 @@
 SCRIPT=$(realpath $0)
 SCRIPTPATH=$(dirname "$SCRIPT")
 
-. "${SCRIPTPATH}/../settings.sh"
+. "${SCRIPTPATH}/settings.sh"
 
 minikube start \
+  --addons=ingress \
+  --driver=docker \
   --kubernetes-version="${CLUSTER_VERSION}" \
   --ports=80:80 --ports=443:443 \
-  --addons=ingress \
+  --profile=$CLUSTER_NAME \
   --force

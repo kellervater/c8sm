@@ -1,6 +1,6 @@
 # c8sm
 This repository contains a ready-to-use [devcontainer](https://containers.dev/) (tailored for VSCode),
-which contains all the prerequisites to be able to skip Chapter 2 of the [C8SM Course](https://employee-academy.camunda.com/c8-self-managed-using-c8-helm-chart). 
+which contains all the prerequisites to be able to skip Chapter 2 (basic tools installation) and 6 (start kind cluster) of the [C8SM Course](https://employee-academy.camunda.com/c8-self-managed-using-c8-helm-chart). 
 
 If you're short on time, it provides a kickstart to get up and running fast whilst not polluting your own system with dependencies.
 
