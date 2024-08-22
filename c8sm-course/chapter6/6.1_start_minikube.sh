@@ -1,9 +1,13 @@
 #!/bin/bash
 
+set -eo pipefail
+
 SCRIPT=$(realpath $0)
 SCRIPTPATH=$(dirname "$SCRIPT")
 
-. "${SCRIPTPATH}/settings.sh"
+. "${SCRIPTPATH}/../../settings.sh"
+
+echo "starting minikube version: $CLUSTER_VERSION for ${CLUSTER_NAME}"
 
 minikube start \
   --addons=ingress \
