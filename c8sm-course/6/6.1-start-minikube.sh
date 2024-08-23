@@ -6,7 +6,7 @@ set -eo pipefail
 
 . "$(dirname "$(realpath "$0")")/../../settings.sh"
 
-echo "▶️  Starting minikube (v$CLUSTER_VERSION) as ${CLUSTER_NAME} ..."
+echo "▶️  Starting minikube ($CLUSTER_VERSION) as ${CLUSTER_NAME} ..."
 
 minikube start \
   --addons=ingress \

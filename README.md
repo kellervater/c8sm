@@ -1,6 +1,6 @@
 # c8sm
 This repository contains a ready-to-use [devcontainer](https://containers.dev/) (tailored for VSCode),
-which contains all the prerequisites to be able to skip Chapter 2 (basic tools installation) and 6 (start kind cluster) of the [C8SM Course](https://employee-academy.camunda.com/c8-self-managed-using-c8-helm-chart). 
+which contains all the prerequisites to be able to skip Chapter 2 (basic tools installation) and 6 (start kind cluster) of the [C8SM Course](https://employee-academy.camunda.com/c8-self-managed-using-c8-helm-chart).
 
 If you're short on time, it provides a kickstart to get up and running fast whilst not polluting your own system with dependencies.
 
@@ -42,15 +42,12 @@ aio                            Install c8sm including all prerequisites
 > When you reach the respective chapters you can either follow the course and type everything yourself
 > or use the corresponding `make` commands listed in the help section.
 
-> [!ATTENTION]
+> [!IMPORTANT]
 > Just make sure to skip Chapter 6 and replace it with `make start-minikube`.
-> `kind` doesn't work well within such a container setup.  
+> `kind` doesn't work well within such a container setup.
 
 > [!CAUTION]
 > This setup is only tested using devcontainers. If you run it natively, don't forget to run `asdf-plugins` and `asdf-install`. You also need to install minikube and docker yourself beforehands.
-
-## Fastlane
-If you want to fast track
 
 ## Troubleshooting
 ### Port Forwardings

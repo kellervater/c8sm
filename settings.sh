@@ -2,7 +2,7 @@
 
 SCRIPT_DIR="$(dirname "${BASH_SOURCE[0]}")"
 
-CLUSTER_VERSION=$(jq -r '.features["ghcr.io/devcontainers/features/kubectl-helm-minikube"].version' $SCRIPT_DIR/.devcontainer/devcontainer.json)
+CLUSTER_VERSION=$(cat .devcontainer/Dockerfile | grep -m 1 KUBERNETES_VERSION | cut -d"=" -f2 | cut -d" " -f1)
 CLUSTER_NAME=camunda-platform-local
 
 C8_NAMESPACE=camunda-platform
