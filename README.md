@@ -52,7 +52,7 @@ aio                            Install c8sm including all prerequisites
 ## Troubleshooting
 ### Port Forwardings
 Per default the ports `80` and `443` should already be auto-forwarded.
-If that's not the case, you can lookup on [how to forward a port](https://code.visualstudio.com/docs/devcontainers/containers#_temporarily-forwarding-a-port).
+If that's not the case (or forwardings magically get lost), you can lookup on [how to forward a port](https://code.visualstudio.com/docs/devcontainers/containers#_temporarily-forwarding-a-port).
 
 ## Todo's
 

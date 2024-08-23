@@ -19,12 +19,13 @@ else
   exit 0
 fi
 
-
 echo "▶️   Starting minikube ($CLUSTER_VERSION) as ${CLUSTER_NAME} ..."
 minikube start \
   --addons=ingress \
+  --cpus="${MINIKUBE_CPUS:-"2"}" \
   --driver=docker \
   --kubernetes-version="${CLUSTER_VERSION}" \
+  --memory="${MINIKUBE_MEM:-"4096m"}" \
   --namespace="${C8_NAMESPACE}" \
   --ports=80:80 --ports=443:443 \
   --profile="${CLUSTER_NAME}" \
