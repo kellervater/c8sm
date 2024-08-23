@@ -30,8 +30,9 @@ RUN apt-get update && \
     lsb-release \
     make \
     nano \
-    sudo \
     python3 python3-pip \
+    sudo \
+    shellcheck \
     # k8s stuff
     kubecolor \
     kubectx \

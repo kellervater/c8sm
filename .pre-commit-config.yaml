@@ -2,17 +2,22 @@ repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.5.0
     hooks:
-      - id: end-of-file-fixer                     # ensures exactly ONE newline at the end of any staged file
-      - id: trailing-whitespace                   # removes trailing whitespaces
-      - id: check-added-large-files               # default 500kb
-      - id: check-json                            # syntax check for json files
-      - id: check-shebang-scripts-are-executable  # checks elephant paintings ;-)
-      - id: check-yaml
-        args:
-          - --allow-multiple-documents            # allows multiple yaml definitions in a single file
-      - id: detect-private-key                    # Checks existence of private keys
-      - id: fix-byte-order-marker                 # if something like UTF-16-BOM happens...
-      - id: pretty-format-json                    # json prettifier
-        args:
-          - --autofix
-          - --no-sort-keys
+    - id: end-of-file-fixer                     # ensures exactly ONE newline at the end of any staged file
+    - id: trailing-whitespace                   # removes trailing whitespaces
+    - id: check-added-large-files               # default 500kb
+    - id: check-json                            # syntax check for json files
+    - id: check-shebang-scripts-are-executable
+    - id: check-yaml
+      args:
+        - --allow-multiple-documents            # allows multiple yaml definitions in a single file
+    - id: detect-private-key                    # Checks existence of private keys
+    - id: fix-byte-order-marker                 # if something like UTF-16-BOM happens...
+    - id: pretty-format-json                    # json prettifier
+      args:
+      - --autofix
+      - --no-sort-keys
+  - repo: https://github.com/detailyang/pre-commit-shell
+    rev: v1.0.6
+    hooks:
+    - id: shell-lint
+      args: [--external-sources]

@@ -2,15 +2,15 @@
 
 # see: https://employee-academy.camunda.com/c8-self-managed-using-c8-helm-chart/1807237
 
-set -eo pipefail
+set -euo pipefail
 
-REPO_PATH="$(dirname "$(realpath "$0")")/../repos"
+SCRIPT_PATH="$(dirname "${BASH_SOURCE[0]}")"
+REPO_PATH="$SCRIPT_PATH/../repos"
 
 get_repo() {
-  local orga_repo=$1
-  local orga=$(echo "$orga_repo" | cut -d'/' -f1)
-  local repo=$(echo "$orga_repo" | cut -d'/' -f2)
-  local repo_dir="$REPO_PATH/$repo"
+  orga_repo=$1
+  repo=$(echo "$orga_repo" | cut -d'/' -f2)
+  repo_dir="$REPO_PATH/$repo"
 
   if [ -d "${repo_dir}" ]; then
     echo -n "🔄  pulling latest changes from ${repo}... "
@@ -19,7 +19,7 @@ get_repo() {
     echo -n "📥  "
     git clone "git@github.com:$orga_repo.git" "$repo_dir"
   fi
-  
+
 }
 
 get_repo camunda/camunda-platform-helm
