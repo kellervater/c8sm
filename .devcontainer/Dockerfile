@@ -12,18 +12,20 @@ ENV \
     K9S_VERSION=v0.32.5 \
     KUBE_PS1_VERSION=v0.9.0
 
-
 # Install essential packages
 RUN apt-get update && \
     apt-get install -y \
     bash-completion \
     curl \
+    dnsutils \
     git \
     gnupg \
     lsb-release \
     make \
     nano \
     sudo \
+    # k8s stuff
+    kubecolor \
     # enable bash completion
     && echo ". /etc/bash_completion" >> ~/.bashrc
 

@@ -1,5 +1,5 @@
 {
-	"name": "Supercharged Devcontainer",
+	"name": "C8SM Devcontainer",
 	"build": {
 		"dockerfile": "./Dockerfile"
 	},
