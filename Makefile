@@ -32,6 +32,7 @@ install-c8: 			## Chapter 7.2 - Installs C8SM via helm
 cleanup-c8:				## Chapter 7.3 - Cleanup healthy installation
 	./c8sm-course/7/7.3-cleanup.sh
 
+
 aio: 							## Install c8sm including all prerequisites
 	$(MAKE) check-dns
 	$(MAKE) get-repos
