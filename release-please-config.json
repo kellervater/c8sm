@@ -6,6 +6,18 @@
         {
           "type": "deps",
           "section": "Dependencies"
+        },
+        {
+          "type": "docs",
+          "section": "Documentation"
+        },
+        {
+          "type": "feat",
+          "section": "Features"
+        },
+        {
+          "type": "fix",
+          "section": "Bugfixes"
         }
       ],
       "release-type": "simple",
