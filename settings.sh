@@ -14,5 +14,4 @@ export DNS_ENTRIES=(local.distro.ultrawombat.com zeebe.local.distro.ultrawombat.
 export MINIKUBE_CPUS=4
 export MINIKUBE_MEM=6144m
 
-
 export PATH_PLATFORM_LOCAL="$SCRIPT_DIR/c8sm-course/repos/camunda-platform-local"
