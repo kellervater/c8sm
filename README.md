@@ -27,15 +27,12 @@ We are using `minikube` here, since `kind` has it's [problems](https://github.co
 
 More in-depth info can be found below. There are also some QoL commands which you might want to use.
 
-## VSCode
+## Start in VSCode
 Open the [Command Palette](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette)(Windows: `Ctrl+Shift+P`) and start typing: ![alt text](img/image.png).
 
 Hit `Enter` twice and let the magic happen!
 
 In the end you'll find yourself in a ready to use devcontainer with all tools installed, required to complete the course.
-
-## Other IDEs
-tbd
 
 ## Structure
 There are a lot of helper scripts to get your local C8SM up and running fast.
