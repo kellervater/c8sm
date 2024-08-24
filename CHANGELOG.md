@@ -1,5 +1,30 @@
 # Changelog
 
+## [1.1.0](https://github.com/kellervater/c8sm/compare/v1.0.2...v1.1.0) (2024-08-24)
+
+
+### Dependencies
+
+* another behavior test ([2e0ae29](https://github.com/kellervater/c8sm/commit/2e0ae29903fcb4658215edde0995375ea59cb1e7))
+* behavior ([649bdfd](https://github.com/kellervater/c8sm/commit/649bdfd774625ae2d101888e18fcfd1a0487ee6e))
+* testing rp behavior ([e644406](https://github.com/kellervater/c8sm/commit/e644406c47a51bcfd67ce7a11eff005dcadde3bb))
+* update dependency x to v1.2.3 ([7e11156](https://github.com/kellervater/c8sm/commit/7e11156bf102889b7deb1c691ac0e2e7aae720d0))
+
+
+### Documentation
+
+* **README:** small refactoring ([0fb2403](https://github.com/kellervater/c8sm/commit/0fb240345a6b9f3fd3040d45af8aba5d33329d9c))
+
+
+### Features
+
+* completed relevant changelog types ([17b271c](https://github.com/kellervater/c8sm/commit/17b271ced497936648614f0a527bca97eafe7319))
+
+
+### Bugfixes
+
+* added rp config ([473be4f](https://github.com/kellervater/c8sm/commit/473be4f3253571d651779f4bee2f04d3ed77bf68))
+
 ## [1.0.2](https://github.com/kellervater/c8sm/compare/v1.0.1...v1.0.2) (2024-08-24)
 
 
