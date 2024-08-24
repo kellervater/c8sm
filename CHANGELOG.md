@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/kellervater/c8sm/compare/v1.0.0...v1.0.1) (2024-08-24)
+
+
+### Bug Fixes
+
+* fake fix to trigger a release ([8ce7e5f](https://github.com/kellervater/c8sm/commit/8ce7e5f2c50b6d8e73ac7a29777336843ec0f250))
+
 ## 1.0.0 (2024-08-24)
 
 
