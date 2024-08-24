@@ -15,8 +15,6 @@ jobs:
     steps:
       - uses: googleapis/release-please-action@v4
         with:
-          release-type: simple
-          target-branch: main
           # the Token must be set to anything else than the default value
           # since otherwise the `docker-publish` workflow won't get triggered.
           # Create one here: https://github.com/settings/personal-access-tokens/new
