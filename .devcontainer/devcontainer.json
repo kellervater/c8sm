@@ -1,8 +1,6 @@
 {
   "name": "C8SM Devcontainer",
-  "build": {
-    "dockerfile": "./Dockerfile"
-  },
+  "image": "ghcr.io/kellervater/c8sm:latest",
   "customizations": {
     "vscode": {
       "extensions": [
