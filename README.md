@@ -10,7 +10,22 @@ Also, there are scripts and make commands to to shortcut some of the course sect
 > The container MAY also work with different IDEs than `VSCode`, as long as they support devcontainers.
 > But The section "customizations.vscode.extensions" will definitely not. So for the best UX I'd recommend using VSCode.
 
+We are using `minikube` here, since `kind` has it's [problems](https://github.com/kubernetes-sigs/kind/issues/3196) to run in a `dind` setup.
+
 # How to Use
+
+## tl;dr
+
+> [!NOTE]
+> This let's you skip chapters 2 and 6 of the C8SM course the fastest.
+
+* Start the devcontainer
+* Run the following commands:
+  * `make get-repos` -> will download all required repositories
+  * `make tooling-config` -> downloads and updates helm repos/dependencies
+  * `make start-minikube` -> starts your local kubernetes cluster
+
+More in-depth info can be found below. There are also some QoL commands which you might want to use.
 
 ## VSCode
 Open the [Command Palette](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette)(Windows: `Ctrl+Shift+P`) and start typing: ![alt text](img/image.png).
@@ -23,7 +38,7 @@ In the end you'll find yourself in a ready to use devcontainer with all tools in
 tbd
 
 ## Structure
-This repository contains a lot of helper scripts to get your local C8SM up and running fast.
+There are a lot of helper scripts to get your local C8SM up and running fast.
 
 When typing `make help` you'll be presented with something like this:
 ```make help

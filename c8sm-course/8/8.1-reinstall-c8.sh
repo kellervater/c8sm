@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # see https://employee-academy.camunda.com/c8-self-managed-using-c8-helm-chart/1810195#
+# make sure to download the values yaml into this folder.
 
 set -euo pipefail
 
