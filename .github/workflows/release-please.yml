@@ -17,3 +17,10 @@ jobs:
         with:
           release-type: simple
           target-branch: main
+          # the Token must be set to anything else than the default value
+          # since otherwise the `docker-publish` workflow won't get triggered.
+          # Create one here: https://github.com/settings/personal-access-tokens/new
+          # Permissions: Repo/PR/Write
+          # Enter it as `RELEASE_PLEASE_TOKEN` here:
+          # https://github.com/owner/repo/settings/secrets/actions (New Repository secret)
+          token: ${{ secrets.RELEASE_PLEASE_TOKEN }}

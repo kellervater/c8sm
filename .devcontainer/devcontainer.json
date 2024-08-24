@@ -10,7 +10,8 @@
         "ms-vscode.makefile-tools",
         "ms-python.python",
         "nguyenngoclong.asdf",
-        "mhutchie.git-graph"
+        "mhutchie.git-graph",
+        "github.vscode-github-actions"
       ]
     }
   },
