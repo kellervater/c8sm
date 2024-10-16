@@ -20,15 +20,15 @@ jobs:
           github-token: ${{ steps.app-token.outputs.token }}
           # we're using squash as merge method to allow the requirement for signed commits on the base branch
           script: |
-            const { data: issues } = await github.issues.listForRepo({
+            const issues = await github.rest.issues.listForRepo({
               owner: context.repo.owner,
               repo: context.repo.repo,
               state: 'open',
               labels: 'autorelease: pending',
             });
-            const pullRequests = issues.filter(issue => issue.pull_request);
+            const pullRequests = issues.data.filter(issue => issue.pull_request);
             for (const pr of pullRequests) {
-              await github.pulls.merge({
+              await github.rest.pulls.merge({
               owner: context.repo.owner,
               repo: context.repo.repo,
               pull_number: pr.number,
