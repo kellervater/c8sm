@@ -1,4 +1,4 @@
-name: Approve & Merge Release-Please PRs
+name: Automerge Release-Please PRs
 
 on:
   schedule:
@@ -6,7 +6,7 @@ on:
   workflow_dispatch:  # Allows manual triggering
 
 jobs:
-  auto-approve-merge:
+  auto-merge:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/create-github-app-token@v1
@@ -27,16 +27,10 @@ jobs:
             });
             const pullRequests = issues.filter(issue => issue.pull_request);
             for (const pr of pullRequests) {
-              await github.pulls.createReview({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                pull_number: pr.number,
-                event: 'APPROVE',
-              });
-                await github.pulls.merge({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                pull_number: pr.number,
-                merge_method: 'rebase',
+              await github.pulls.merge({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: pr.number,
+              merge_method: 'rebase',
               });
             }
