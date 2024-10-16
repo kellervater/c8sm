@@ -23,7 +23,7 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               state: 'open',
-              labels: 'autorelease:pending',
+              labels: 'autorelease: pending',
             });
             const pullRequests = issues.filter(issue => issue.pull_request);
             for (const pr of pullRequests) {
