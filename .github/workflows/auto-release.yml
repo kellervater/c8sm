@@ -2,7 +2,7 @@ name: Automerge Release-Please PRs
 
 on:
   schedule:
-    - cron: '0 4 * * 6'  # Runs every Saturday at 4 AM CET
+    - cron: '*/2 * * * *'  # Runs every 2 minutes
   workflow_dispatch:  # Allows manual triggering
 
 jobs:
