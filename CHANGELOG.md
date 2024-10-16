@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.1.1 (2024-10-16)
+
+## What's Changed
+* chore: testing rp tweaks by @kellervater in https://github.com/kellervater/c8sm/pull/12
+
+
+**Full Changelog**: https://github.com/kellervater/c8sm/compare/v1.1.0...v1.1.1
+
 ## [1.1.0](https://github.com/kellervater/c8sm/compare/v1.0.2...v1.1.0) (2024-08-24)
 
 
