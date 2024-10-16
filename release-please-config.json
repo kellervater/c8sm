@@ -29,7 +29,7 @@
         }
       ],
       "changelog-type": "github",
-      "release-type": "simple",
+      "release-type": "github",
       "include-v-in-tag": true
     }
   }
