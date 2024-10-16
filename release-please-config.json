@@ -4,8 +4,12 @@
     ".": {
       "changelog-sections": [
         {
+          "type": "chore",
+          "section": "Miscellaneous"
+        },
+        {
           "type": "deps",
-          "section": "Dependencies"
+          "section": "Dependency Upgrades"
         },
         {
           "type": "docs",
@@ -20,6 +24,7 @@
           "section": "Bugfixes"
         }
       ],
+      "changelog-type": "github",
       "release-type": "simple",
       "include-v-in-tag": true
     }
