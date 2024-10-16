@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.1.2 (2024-10-16)
+
+## What's Changed
+* ci: use github app for release please by @kellervater in https://github.com/kellervater/c8sm/pull/14
+* ci: autorelease by @kellervater in https://github.com/kellervater/c8sm/pull/16
+* ci: try github release type by @kellervater in https://github.com/kellervater/c8sm/pull/17
+* Fix release type by @kellervater in https://github.com/kellervater/c8sm/pull/18
+
+
+**Full Changelog**: https://github.com/kellervater/c8sm/compare/v1.1.1...v1.1.2
+
 ## 1.1.1 (2024-10-16)
 
 ## What's Changed
