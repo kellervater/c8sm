@@ -1,1 +1,0 @@
-try to trigger a release with a chore commit and use Github styled changelogs.
