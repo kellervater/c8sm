@@ -18,6 +18,7 @@ jobs:
       - uses: actions/github-script@v3
         with:
           github-token: ${{ steps.app-token.outputs.token }}
+          # we're using squash as merge method to allow the requirement for signed commits on the base branch
           script: |
             const { data: issues } = await github.issues.listForRepo({
               owner: context.repo.owner,
@@ -31,6 +32,6 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               pull_number: pr.number,
-              merge_method: 'rebase',
+              merge_method: 'squash',
               });
             }
