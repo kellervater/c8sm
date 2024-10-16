@@ -22,6 +22,10 @@
         {
           "type": "fix",
           "section": "Bugfixes"
+        },
+        {
+          "type": "ci",
+          "section": "CI/CD"
         }
       ],
       "changelog-type": "github",

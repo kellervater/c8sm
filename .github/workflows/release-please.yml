@@ -13,12 +13,18 @@ jobs:
   release-please:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/create-github-app-token@v1
+        id: app-token
+        with:
+          app-id: 1027247 # kellervater-release-please
+          private-key: ${{ secrets.RELEASE_PLEASE_PRIVATE_KEY }}
       - uses: googleapis/release-please-action@v4
         with:
           # the Token must be set to anything else than the default value
           # since otherwise the `docker-publish` workflow won't get triggered.
           # Create one here: https://github.com/settings/personal-access-tokens/new
+          # Or create a Github App including installation like we've done here.
           # Permissions: Repo/PR/Write Repo/Contents/Write
           # Enter it as `RELEASE_PLEASE_TOKEN` here:
           # https://github.com/owner/repo/settings/secrets/actions (New Repository secret)
-          token: ${{ secrets.RELEASE_PLEASE_TOKEN }}
+          token: ${{ steps.app-token.outputs.token }}
