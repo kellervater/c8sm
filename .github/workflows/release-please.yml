@@ -17,7 +17,7 @@ jobs:
         id: app-token
         with:
           app-id: 1027247 # kellervater-release-please
-          private-key: ${{ secrets.RELEASE_PLEASE_PRIVATE_KEY }}
+          private-key: ${{ secrets.RELEASE_PLEASE_SECRET_KEY }}
       - uses: googleapis/release-please-action@v4
         with:
           # the Token must be set to anything else than the default value
