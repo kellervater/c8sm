@@ -2,7 +2,8 @@ name: Automerge Release-Please PRs
 
 on:
   schedule:
-    - cron: '15 * * * *'
+    - cron: '*/5 * * * *'
+  workflow_dispatch:  # Allows manual triggering
 
 jobs:
   auto-merge:
