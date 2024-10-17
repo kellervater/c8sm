@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.3.0 (2024-10-17)
+
+## What's Changed
+* feat: get rid of gh app by @kellervater in https://github.com/kellervater/c8sm/pull/25
+
+
+**Full Changelog**: https://github.com/kellervater/c8sm/compare/v1.2.2...v1.3.0
+
 ## 1.2.2 (2024-10-17)
 
 ## What's Changed
