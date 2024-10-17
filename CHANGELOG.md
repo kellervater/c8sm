@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.2.2 (2024-10-17)
+
+## What's Changed
+* refactor: move by @kellervater in https://github.com/kellervater/c8sm/pull/22
+* refactor: stuff by @kellervater in https://github.com/kellervater/c8sm/pull/23
+
+
+**Full Changelog**: https://github.com/kellervater/c8sm/compare/v1.2.1...v1.2.2
+
 ## 1.2.1 (2024-10-16)
 
 **Full Changelog**: https://github.com/kellervater/c8sm/compare/v1.2.0...v1.2.1
