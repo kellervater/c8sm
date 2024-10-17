@@ -16,6 +16,6 @@ jobs:
           private-key: ${{ secrets.RELEASE_PLEASE_SECRET_KEY }}
       - uses: googleapis/release-please-action@v4
         with:
-          config-file: .github/config/release-please-config.yml
-          manifest-file: .github/config/release-please-manifest.yml
+          config-file: .github/config/release-please-config.json
+          manifest-file: .github/config/.release-please-manifest.json
           token: ${{ steps.app-token.outputs.token }}
