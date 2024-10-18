@@ -13,7 +13,7 @@ jobs:
   release-please:
     runs-on: ubuntu-latest
     steps:
-      - uses: googleapis/release-please-action@v4
+      - uses: camunda/infra-global-github-actions/pull-request/release-please@infra-gh-614-automerge
         with:
-          config-file: .github/config/release-please-config.json
-          manifest-file: .github/config/.release-please-manifest.json
+          manifest-filename: .github/config/.release-please-manifest.json
+          token: ${{ secrets.GITHUB_TOKEN}}
