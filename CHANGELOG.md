@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.3.1 (2024-10-18)
+
+## What's Changed
+* ci: use centralized release-please action by @kellervater in https://github.com/kellervater/c8sm/pull/27
+* fix: live with limitations by @kellervater in https://github.com/kellervater/c8sm/pull/28
+
+
+**Full Changelog**: https://github.com/kellervater/c8sm/compare/v1.3.0...v1.3.1
+
 ## 1.3.0 (2024-10-17)
 
 ## What's Changed
