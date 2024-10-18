@@ -16,4 +16,4 @@ jobs:
       - uses: camunda/infra-global-github-actions/pull-request/release-please@infra-gh-614-automerge
         with:
           manifest-filename: .github/config/.release-please-manifest.json
-          token: ${{ secrets.GITHUB_TOKEN}}
+          github-token: ${{ secrets.GITHUB_TOKEN}}
