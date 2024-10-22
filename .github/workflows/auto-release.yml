@@ -15,6 +15,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Create Release
-        uses: camunda/infra-global-github-actions/pull-request/automerge@infra-gh-614-automerge
+        uses: camunda/infra-global-github-actions/teams/infra/pull-request/automerge@infra-gh-614-automerge
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
