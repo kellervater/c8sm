@@ -26,3 +26,4 @@ jobs:
           MERGE_LABELS: "automerge"
           MERGE_REQUIRED_APPROVALS: 0
           LOG: "DEBUG"
+          BASE_BRANCHES: "main"
