@@ -1,12 +1,9 @@
 name: Automerge Release-Please PRs
 
 on:
-  # schedule:
-  #   - cron: '36 4 * * 1' # runs every Monday at 04:36 UTC
-  # workflow_dispatch: # so we can run it on non-mainline branches
-  pull_request: # so we can run it on PRs
-    branches:
-      - main
+  schedule:
+    - cron: '36 4 * * 1' # runs every Monday at 04:36 UTC
+  workflow_dispatch: # so we can run it on non-mainline branches
 
 permissions:
   contents: write       # so we can modify the changelog
@@ -31,16 +28,39 @@ jobs:
       #     LOG: "DEBUG"
       #     BASE_BRANCHES: "main"
       #     UPDATE_METHOD: "rebase"
+
   automerge:
     runs-on: ubuntu-24.04
     timeout-minutes: 6  # a user can immediately approve it but it has to wait for dependent workflow runs to finish first
     steps:
+    - name: List Pull Requests
+      uses: actions/github-script@v6
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        script: |
+          const { Octokit } = require("@octokit/rest");
+          const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
+
+          const { data: pullRequests } = await octokit.pulls.list({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            state: "open",
+            head: `${context.repo.owner}:${context.ref.replace('refs/heads/', '')}`,
+            sort: "updated",
+            direction: "desc",
+            per_page: 100
+          });
+
+          console.log("Open Pull Requests:");
+          pullRequests.forEach(pr => {
+            console.log(`#${pr.number}: ${pr.title}`);
+          });
     - name: automerge
       uses: pascalgn/automerge-action@v0.16.4
       env:
         GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-        MERGE_METHOD: merge
-        MERGE_LABELS: "!no-merge"
+        MERGE_METHOD: squash
+        MERGE_LABELS: "!no-merge,automerge"
         MERGE_RETRY_SLEEP: 30000
         MERGE_RETRIES: 10
         MERGE_REQUIRED_APPROVALS: 1
