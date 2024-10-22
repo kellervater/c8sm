@@ -13,6 +13,6 @@ jobs:
   release-please:
     runs-on: ubuntu-latest
     steps:
-      - uses: camunda/infra-global-github-actions/pull-request/release-please@infra-gh-614-automerge
+      - uses: camunda/infra-global-github-actions/teams/infra/pull-request/release-please@infra-gh-614-automerge
         with:
           github-token: ${{ secrets.GITHUB_TOKEN}}
