@@ -11,20 +11,33 @@ permissions:
   actions: write        # so subsequent actions can run
 
 jobs:
-  auto-merge:
-    runs-on: ubuntu-latest
-    steps:
+  # auto-merge:
+  #   runs-on: ubuntu-latest
+  #   steps:
       # - name: Create Release
       #   uses: camunda/infra-global-github-actions/teams/infra/pull-request/automerge@infra-gh-614-automerge
       #   with:
       #     github-token: ${{ secrets.GITHUB_TOKEN }}
-      - name: automerge
-        uses: pascalgn/automerge-action@v0.16.4
-        env:
-          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-          MERGE_METHOD: "merge"
-          MERGE_LABELS: "automerge"
-          MERGE_REQUIRED_APPROVALS: 0
-          LOG: "DEBUG"
-          BASE_BRANCHES: "main"
-          UPDATE_METHOD: "rebase"
+      # - name: automerge
+      #   uses: pascalgn/automerge-action@v0.16.4
+      #   env:
+      #     GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+      #     MERGE_METHOD: "merge"
+      #     MERGE_LABELS: "automerge"
+      #     MERGE_REQUIRED_APPROVALS: 0
+      #     LOG: "DEBUG"
+      #     BASE_BRANCHES: "main"
+      #     UPDATE_METHOD: "rebase"
+  automerge:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 6  # a user can immediately approve it but it has to wait for dependent workflow runs to finish first
+    steps:
+    - name: automerge
+      uses: pascalgn/automerge-action@v0.16.4
+      env:
+        GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+        MERGE_METHOD: merge
+        MERGE_LABELS: "!no-merge"
+        MERGE_RETRY_SLEEP: 30000
+        MERGE_RETRIES: 10
+        MERGE_REQUIRED_APPROVALS: 1
