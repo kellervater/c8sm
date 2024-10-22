@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.3.2 (2024-10-22)
+
+## What's Changed
+* ci: easier automerge by @kellervater in https://github.com/kellervater/c8sm/pull/30
+
+
+**Full Changelog**: https://github.com/kellervater/c8sm/compare/v1.3.1...v1.3.2
+
 ## 1.3.1 (2024-10-18)
 
 ## What's Changed
