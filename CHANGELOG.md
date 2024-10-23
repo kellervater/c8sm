@@ -1,15 +1,5 @@
 # Changelog
 
-## 1.3.4 (2024-10-22)
-
-## What's Changed
-* refactor: remove file by @kellervater in https://github.com/kellervater/c8sm/pull/34
-* ci: try to use action directly by @kellervater in https://github.com/kellervater/c8sm/pull/36
-* ci: extra-labels for release by @kellervater in https://github.com/kellervater/c8sm/pull/37
-
-
-**Full Changelog**: https://github.com/kellervater/c8sm/compare/v1.3.3...v1.3.4
-
 ## 1.3.3 (2024-10-22)
 
 ## What's Changed
