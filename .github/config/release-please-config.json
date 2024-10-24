@@ -37,12 +37,12 @@
     ".": {
       "include-v-in-tag": true
     },
-    "monrepo_example/5.x":{
+    "monorepo_example/5.x":{
       "include-component-in-tag": true,
       "package-name": "5.x",
       "tag-separator": ""
     },
-    "monrepo_example/8.0":{
+    "monorepo_example/8.0":{
       "include-component-in-tag": true,
       "package-name": "8.0",
       "tag-separator": ""
