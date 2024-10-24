@@ -15,6 +15,6 @@ jobs:
         with:
           app-id: 1027247 # kellervater-release-please
           private-key: ${{ secrets.RELEASE_PLEASE_SECRET_KEY }}
-      - uses: camunda/infra-global-github-actions/teams/infra/pull-request/release@infra-gh-614-automerge
+      - uses: camunda/infra-global-github-actions/teams/infra/pull-request/release@main
         with:
           github-token: ${{ steps.app-token.outputs.token }}
