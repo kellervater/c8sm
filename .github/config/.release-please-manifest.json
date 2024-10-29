@@ -1,5 +1,3 @@
 {
-  ".": "1.4.2",
-  "monorepo_example/5.x": "1.0.1",
-  "monorepo_example/8.0": "1.0.1"
+  ".": "1.4.2"
 }
