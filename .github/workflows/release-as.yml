@@ -20,7 +20,7 @@ jobs:
       - name: Run script
         shell: bash
         run: |
-          version=$(grep -oP '(?<=^FROM\s+\S+:)\S+' Dockerfile)
+          version=$(awk '/^FROM/ {split($2, a, ":"); print a[2]}' Dockerfile)
           git commit --allow-empty -m "Release-As: $version"
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
