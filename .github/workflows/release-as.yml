@@ -1,0 +1,19 @@
+name: Mirror Dependency Version
+
+on:
+  push:
+    branches:
+      - 'renovate/*'
+    paths:
+      - 'Dockerfile'
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run script
+        shell: bash
+        run: |
+          version=$(grep -oP '(?<=^FROM\s+\S+:)\S+' Dockerfile)
+          git commit --allow-empty -m "Release-As: $version"

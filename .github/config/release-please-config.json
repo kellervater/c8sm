@@ -36,19 +36,6 @@
   "packages": {
     ".": {
       "include-v-in-tag": true
-    },
-    "monorepo_example/5.x":{
-      "include-component-in-tag": true,
-      "include-v-in-tag": true,
-      "package-name": "5.x",
-      "tag-separator": ""
-    },
-    "monorepo_example/8.0":{
-      "include-component-in-tag": true,
-      "include-v-in-tag": true,
-      "package-name": "8.0",
-      "tag-separator": ""
     }
-  },
-  "separate-pull-requests": false
+  }
 }
