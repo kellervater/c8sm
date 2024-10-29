@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.4.3 (2024-10-29)
+
+## What's Changed
+* ci: create release-as workflow by @kellervater in https://github.com/kellervater/c8sm/pull/47
+* Renovate/fake a change by @kellervater in https://github.com/kellervater/c8sm/pull/49
+* Renovate/fake another by @kellervater in https://github.com/kellervater/c8sm/pull/50
+
+
+**Full Changelog**: https://github.com/kellervater/c8sm/compare/v1.4.2...v1.4.3
+
 ## 1.4.2 (2024-10-25)
 
 **Full Changelog**: https://github.com/kellervater/c8sm/compare/v1.4.1...v1.4.2
