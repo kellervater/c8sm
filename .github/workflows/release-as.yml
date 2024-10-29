@@ -20,7 +20,7 @@ jobs:
       - name: Run script
         shell: bash
         run: |
-          version=$(awk '/^FROM/ {split($2, a, ":"); print a[2]}' Dockerfile)
+          version=$(awk '/^FROM ghcr.io\/actions\/actions-runner/ {split($2, a, ":"); print a[2]}' Dockerfile)
           git commit --allow-empty -m "Release-As: $version"
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
