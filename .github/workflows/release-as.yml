@@ -26,6 +26,11 @@ jobs:
           # Get the version from the Dockerfile
           version=$(awk '/^FROM ghcr.io\/actions\/actions-runner/ {split($2, a, ":"); print a[2]}' Dockerfile)
           
+          # configure git
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          # git remote set-url origin https://x-access-token:${{ steps.app-token.outputs.token }}@github.com/${{ github.repository }}.git
+
           # create a release-as commit which dictates release-please on how to bump the version
           git commit --allow-empty -m "Release-As: $version"
           git push origin HEAD
