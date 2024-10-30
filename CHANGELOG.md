@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.0 (2024-10-30)
+
+**Full Changelog**: https://github.com/kellervater/c8sm/compare/v1.4.3...v2.0.0
+
 ## 1.4.3 (2024-10-29)
 
 ## What's Changed
