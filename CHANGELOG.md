@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.2.2 (2024-10-30)
+
+## What's Changed
+* A new feature by @kellervater in https://github.com/kellervater/c8sm/pull/53
+
+
+**Full Changelog**: https://github.com/kellervater/c8sm/compare/v2.0.0...v2.2.2
+
 ## 2.0.0 (2024-10-30)
 
 **Full Changelog**: https://github.com/kellervater/c8sm/compare/v1.4.3...v2.0.0
